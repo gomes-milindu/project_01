@@ -4,11 +4,13 @@ import Student from "./models/student.js";
 import studentRouter from "./routers/studentRouter.js";
 import userRouter from "./routers/userRouter.js";
 import user from "./models/user.js"
-const connectionString = "mongodb+srv://user-1:1234@cluster0.arkyzdz.mongodb.net/?appName=Cluster0";
+
 import jwt from "jsonwebtoken"
 import productRouter from "./routers/productRouter.js";
 import cors from "cors";
-
+import dotenv from "dotenv";
+dotenv.config();
+const connectionString = process.env.MONGO_URI;
 
 mongoose.connect(connectionString).then(
    ()=> console.log("mongoose connected")
