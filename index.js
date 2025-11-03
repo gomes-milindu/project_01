@@ -32,7 +32,7 @@ app.use(
         if(token != null){
              token = token.replace("Bearer ","")
              console.log(token)
-             jwt.verify(token,"jwt-secret",
+             jwt.verify(token,process.env.JWT_SECRET,
                 (err,decoded)=>{
                     if(decoded == null){
                         res.json(

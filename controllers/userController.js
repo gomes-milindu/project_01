@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken"
 
 
 
+
 export function createUser(req,res){
     
     
@@ -60,7 +61,7 @@ export function loginUser(req,res){
                             isEmailVerified: user.isEmailVerified
 
                         },
-                        "jwt-secret", // encrypt key eka
+                        process.env.JWT_SECRET, // encrypt key eka
                     )
                     res.json({
                         "message": "Login Succesfull",
