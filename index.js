@@ -61,10 +61,10 @@ function success(){
 
 // router use  krnwa
 
-app.use("/students",studentRouter);
-app.use("/users",userRouter)
+app.use("/api/students",studentRouter);
+app.use("/api/users",userRouter)
 
-app.use("/products",productRouter)
+app.use("/api/products",productRouter)  // normaly api kiyala dnwa aduragnna
 
 app.get("/",(req,res)=>{
     
